@@ -1,0 +1,658 @@
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-nav-elements:white;
+    --color-introduction-article-elements:white;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+main{
+    width: 100vw;
+    height: auto;
+}
+/* ********************************************************************************* navigation-and-introduction */
+#introduction{
+    font-size: 10px;
+    background-image: url("img/backround-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+}
+
+/* NAVIGATION */
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: #221F28;
+}
+
+nav p{
+    font-size: 3em;
+    color: var(--color-nav-elements);
+    margin: 0 0 0 1em;
+    font-weight: 700;}
+
+nav ul{
+    display: flex;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: var(--color-nav-elements);
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin: 2em; 
+}
+nav ul a:hover{
+    color:red;
+    transition: 0.5s;
+}
+
+/* INTRODUCTION */
+
+#introduction{
+max-height: 100vh;
+height: 100vh;
+}
+
+#introduction article{
+    color:var(--color-introduction-article-elements);
+    text-transform: uppercase;
+    padding:30vh 0 0 10vw;
+}
+
+#introduction article h1{
+    font-size: 6.4em;
+    font-weight: 700;
+    color:var(--color-introduction-article-elements);
+    letter-spacing: 0.4em;
+}
+
+#introduction article p{
+    font-size: 1em;
+    font-weight: 400;
+    color:var(--color-introduction-article-elements);
+    letter-spacing: 5px;
+    margin: 2em 0;
+}
+
+#introduction article a{
+    background-color:black;
+    border: none;
+    color:var(--color-introduction-article-elements);
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border: 1em solid black;
+    text-decoration: none;
+}
+
+#introduction article a:hover{
+    background-color: red;
+    border-color: red;
+    transition: 0.5s;
+}
+
+/* ********************************************************************* ABOUT-ME */
+#about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6em 0 0 0;
+    height: auto;
+}
+#about-me .name-and-surname{
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+#about-me .name-and-surname h1{
+font-size: 2.6em;
+font-weight: 700;
+}
+
+#about-me .name-and-surname p{
+color: #cccccc;
+margin:1em 0;
+}
+
+.photo-about-me-and-skills{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: space-between;
+}
+
+.about-me-description h1{
+    font-size: 1.7em;
+    letter-spacing: 2px;
+    margin:0 0 0.5em 0;
+}
+
+.about-me-description p{
+    font-size: 1.2em;
+    line-height: 2em;
+    margin:0 0 2em 0;
+    letter-spacing: 1px;
+}
+
+.photo-about-me-and-skills img{
+    width: 30%;
+    height: auto;
+    max-height: 450px;
+    border-radius: 50px;
+    min-width: 290px;
+}
+
+.photo-about-me-and-skills .about-me-description{
+    width: 30%;
+    margin: 0 2em;
+}
+
+.photo-about-me-and-skills .about-me-description p a{
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.photo-about-me-and-skills .about-me-description p a:hover{
+    color: red;
+    transition: 0.5s all;
+}
+
+.photo-about-me-and-skills .skills{
+    width: 25%;
+    min-width: 200px;
+}
+
+/* SKILLS BARS */
+.skills{
+border: 1px black solid;
+width: 30%;
+display: flex;
+flex-direction: column;
+align-items: center;
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.skills h1{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+}
+
+.skills h3{
+    margin: 0.5em 2em;
+align-self: flex-start;
+letter-spacing: 1px;
+}
+
+.skill-box{
+    width: 90%;
+    margin: 0.5em 0;
+}
+
+.skill-box:last-child{
+margin:0 0 2em 0;
+}
+
+.skill-box p{
+    margin: 0 0 0.5em;
+    font-size: 1.3em;
+}
+
+.skill{
+    background-color: #262626;
+    padding: 0.4em;
+    border:1px solid #0fffb7;
+    border-radius: 20px;
+}
+
+@-webkit-keyframes animate-positive{
+    0% { width: 0%; }
+}
+@keyframes animate-positive{
+    0% { width: 0%; }
+}
+
+
+.skill-level{
+    background-color: #0fffb7;
+    width: 100%;
+    height: 1em;
+    border-radius: 20px;
+}
+
+
+/* *********************************************************************** STATISTISC */
+#statistics{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: space-around;
+    background-color: grey;
+    padding: 4em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10em 0 0 0;
+    font-size: 10px;
+}
+
+#statistics .statistic-column{
+    width:25%;
+    text-align: center;
+    padding: 1em;
+}
+#statistics .statistic-column i{
+    font-size: 6em;
+    color: #eb8242;
+}
+#statistics .statistic-column .counter{
+    font-size: 2.6em;
+    margin:0.5em 0 0.1em 0;
+}
+#statistics .statistic-column p{
+    font-size: 1.1em;
+}
+
+/* ******************************************************************************* PROJECTS */
+#projects{
+    width:100%;
+    margin:10em 0 0 0;
+}
+
+#projects h1{
+    font-size: 3em;
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+#projects h1 span{
+color: green;
+}
+
+.gallery{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+.gallery a{
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+margin: 1em;
+max-width: 400px;
+max-height: 300px;
+min-width: 200px;
+min-height:100px;
+}
+.gallery a img{
+width: 100%;
+height: auto;
+}
+
+/* ************************************************************************************** FEATURES */
+#features{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: space-around;
+    margin:5em 2em;
+}
+
+.feature-column{
+    width:30%;
+    margin:2em;
+    
+}
+.feature-column i{
+font-size: 6em;
+color: tomato;
+}
+.feature-column h1{
+    margin:0.7em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.feature-column p{
+    width:70%;
+    font-size: 1.1em;
+    line-height: 2em;
+    color: gray;
+}
+
+/* **************************************************************************************** WORK FOR */
+#work-for{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+    background-color: black;
+    padding: 13em;
+}
+#work-for img{
+    width: 20%;
+}
+
+/* ***************************************************************************************** BLOG */
+#blog{
+    background-color: grey;
+    text-align: center;
+    position: relative;
+    }
+    .posts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        align-content: stretch;
+        position: relative;
+        bottom: 7em;
+    }
+    .post-column{
+        width: 20%;
+        margin:1em 1em;
+        background-color: white;
+        position: relative;
+    }
+    .post-column img {
+        width: 100%;
+        height: auto;
+    }
+    .post-column .text{
+    margin: 2em;
+        width: 80%;
+        text-align: left;
+    }
+    .post-column .text h1{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 1em;
+    }
+    .post-column .text p{
+        width: 70%;
+        line-height: 1.5em;
+        margin: 1em 1em;
+    }
+    .post-column .text .author{
+        margin: 2em 1em;
+    }
+    .post-column span {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+    }
+    .category{
+        text-transform: uppercase;
+        padding: 0.5em;
+        color: white;
+        letter-spacing: 1px;
+    }
+    .lifestyle{
+        background-color: red;
+    }
+    .science{
+        background-color: orange;
+    }
+    .business{
+        background-color: green;
+    }
+    #blog button{
+        border: none;
+        padding: 1em;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: black;
+        color: white;
+        margin: 0 0 4em 0;
+    }
+    #blog button:hover{
+    cursor: pointer;
+    background-color: red;
+    transition: 0.5s all;
+    }
+    
+/* ************************************************************************************ FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    padding: 0.5em;
+    color:white;
+    font-size: 2em;
+}
+
+footer p{
+    margin: 0 0 0 1em;
+}
+
+footer .social-media a{
+    font-size: 2.5em;
+    color: white;
+    margin: 1em 0.5em;
+}
+
+footer .social-media a:hover{
+    color: red;
+    transition: 0.5s all;
+}
+
+
+/* MEDIA QUERY */
+/* NAV AND INTRODUCTION */
+@media screen and (max-width: 870px) {
+    #introduction{
+        font-size: 8px;
+    }
+    nav{
+        font-size: 8px;
+        justify-content: center;
+    }
+    nav p{
+        display: none;
+    }
+}
+@media screen and (max-width: 670px){
+    #introduction{
+        font-size: 7px;
+    }
+    nav{
+        font-size: 7px;
+    }
+}
+@media screen and (max-width: 590px){
+    #introduction{
+        font-size: 7px;
+    }
+    nav{
+        font-size: 6px;
+    }
+}
+@media screen and (max-width: 515px){
+    #introduction{
+        font-size: 6px;
+    }
+    nav ul a {
+        margin: 12px 6px;
+    }
+}
+@media screen and (max-width: 420px){
+    nav ul a {
+        margin: 12px 2px;
+    }
+}
+@media screen and (max-width: 363px){
+    #introduction{
+        font-size: 5px;
+    }
+    nav{
+    padding: 5px;
+    }
+    nav ul a {
+        font-size: 5px;
+        margin: 4px 1px;
+    }
+}
+
+/* ABOUT ME */
+@media (max-width:1024px){
+    #about-me {
+        font-size: 8px;
+    }
+
+
+}
+@media (max-width:931px){
+    #about-me .photo-about-me-and-skills .about-me-description{
+        width: 50%;
+    }
+    #about-me .photo-about-me-and-skills .skills{
+        margin: 2em 0 0 0;
+        width: 50%;
+    }
+}
+@media (max-width:805px){
+    #about-me .photo-about-me-and-skills .about-me-description{
+        margin: 2em 2ems 0 0;
+    }
+    #about-me .photo-about-me-and-skills img{
+        margin: 1em;
+    }
+}
+@media (max-width:642px){
+    #about-me .photo-about-me-and-skills .about-me-description{
+        margin: 2em 0;
+    }
+}
+@media (max-width:450px){
+    #about-me .photo-about-me-and-skills {
+        width: 100%;
+    }
+    #about-me .photo-about-me-and-skills img{
+        width: 80%;
+    }
+    #about-me .photo-about-me-and-skills .about-me-description{
+        width: 90%;
+        text-align: center;
+        
+    }
+    #about-me .photo-about-me-and-skills .about-me-description .skills{
+        width: 100%;
+    }
+}
+
+/* STATISTICS */
+@media (max-width:642px){
+    #statistics {
+        font-size: 8px;
+    }
+}
+@media (max-width:320px){
+    #statistics {
+        font-size: 6px;
+    }
+}
+
+/* FEATURES */
+@media screen and (max-width:850px){
+    .feature-column p{
+        width: 100%;
+    }
+}
+@media screen and (max-width:660px){
+    .feature-column{
+        margin: 0.7em;
+    }
+
+}
+@media screen and (max-width:550px){
+    .feature-column{
+        font-size: 8px;
+    }
+
+}
+@media screen and (max-width:450px){
+    #features{
+        flex-direction: column;
+    }
+    .feature-column{
+        width: 100%;
+        text-align: center;
+    }
+}
+/* WORK FOR */
+@media screen and (max-width:800px){
+    #work-for{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width:700px){
+    #work-for{
+        font-size: 6px;
+    }
+}
+@media screen and (max-width:500px){
+    #work-for{
+        font-size: 4px;
+    }
+}
+
+/* BLOG */
+@media screen and (max-width:950px){
+    #blog{
+        font-size: 8px;
+    }
+    .post-column .text{
+        width: 100%;
+    }
+}
+@media screen and (max-width:750px){
+    .post-column{
+        width: 30%;
+    }
+}
+@media screen and (max-width:502px){
+    #blog .posts{
+        bottom: 4em;
+    }
+    .post-column{
+        min-width: 250px;
+
+    }
+}
+
+/* FOOTER */
+@media screen and (max-width:500px){
+    footer{
+        font-size: 1em;
+    }
+}
