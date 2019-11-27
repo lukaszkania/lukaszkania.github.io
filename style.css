@@ -339,7 +339,7 @@ color: tomato;
     letter-spacing: 2px;
 }
 .feature-column p{
-    width:70%;
+    width:100%;
     font-size: 1.1em;
     line-height: 2em;
     color: gray;
